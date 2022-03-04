@@ -4,13 +4,16 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="deno.unstable" />
 
-import { start } from "https://raw.githubusercontent.com/lucacasonato/fresh/main/server.ts";
+import { start } from "./server_deps.ts";
 import { populate } from "./util/env.ts";
-import routes from "./routes.gen.ts";
+import { packCss } from "./util/packer.ts";
+import manifest from "./fresh.gen.ts";
 
 export const BASE_URL = Deno.env.get("DENO_DEPLOYMENT_ID") == undefined
   ? "http://localhost:8000"
   : "https://pinguino.deno.dev";
 
 await populate();
-await start(routes);
+await packCss();
+
+await start(manifest);

@@ -1,4 +1,4 @@
-import { HandlerContext } from "../../deps.ts";
+import { HandlerContext } from "../../server_deps.ts";
 import { BASE_URL } from "../../main.ts";
 
 export const handler = async (ctx: HandlerContext): Promise<Response> => {
@@ -24,7 +24,9 @@ export const handler = async (ctx: HandlerContext): Promise<Response> => {
     status: 307,
     headers: {
       "Location": `${BASE_URL}/dashboard`,
-      "Set-Cookie": `token=${json}; Secure; SameSite=Strict`,
+      "Set-Cookie": `token=${
+        JSON.stringify(json)
+      }; SameSite=Lax; Path=/; Secure`,
     },
   });
 };

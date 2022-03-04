@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, PageConfig } from "../deps.ts";
+import { h } from "../client_deps.ts";
 import { BASE_URL } from "../main.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
@@ -19,12 +19,12 @@ export default function Login() {
   }`;
 
   return (
-    <div class="wrapper">
+    <div class="margin-60px-auto max-width-800px">
       <Head />
       <Header />
-      <div class="invite">
+      <div class="background-lightblue text-align-center width-200px margin-auto border-radius-18px font-size-medium">
         <a href={authorizeUrl}>
-          <p class="invite-child">Log In</p>
+          <p class="display-inline-block padding-left-10px">Log In</p>
         </a>
       </div>
       <Footer />

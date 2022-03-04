@@ -1,18 +1,17 @@
 /** @jsx h */
-import { h } from "../deps.ts";
+import { h } from "../client_deps.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
 import Footer from "../components/footer.tsx";
 
-export default function NotFound() {
+import DashboardIsland from "../islands/dashboard.tsx";
+
+export default function Dashboard() {
   return (
-    <div class="wrapper glitch">
+    <div class="margin-60px-auto max-width-800px">
       <Head />
       <Header />
-      <h1>404 - Not Found</h1>
-      <p>
-        You're lost and it's getting dark...better go <a href="/">home</a>.
-      </p>
+      <DashboardIsland />
       <Footer />
     </div>
   );

@@ -1,12 +1,12 @@
 /** @jsx h */
-import { h, PageConfig } from "../deps.ts";
+import { h } from "../client_deps.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
 import Footer from "../components/footer.tsx";
 
 export default function Home() {
   return (
-    <div class="wrapper">
+    <div class="margin-60px-auto max-width-800px">
       <Head />
       <Header />
       <h2>Modern. Full Featured. Open Source.</h2>
@@ -15,18 +15,16 @@ export default function Home() {
         make good use of all the new Discord features like application commands.
         Pinguino is written in Kotlin using KordEx.
       </p>
-      <div class="invite">
+      <div class="background-lightblue text-align-center width-200px margin-auto border-radius-18px font-size-medium">
         <a
           href="https://discord.com/oauth2/authorize?client_id=896758540784500797&permissions=292057803846&scope=applications.commands%20bot"
           target="_blank"
         >
-          <i class="invite-child fa-regular fa-plus"></i>
-          <p class="invite-child">Invite Pinguino</p>
+          <i class="display-inline-block pad-left-10px fa-regular fa-plus"></i>
+          <p class="display-inline-block pad-left-10px">Invite Pinguino</p>
         </a>
       </div>
       <Footer />
     </div>
   );
 }
-
-export const config: PageConfig = { runtimeJS: false };
