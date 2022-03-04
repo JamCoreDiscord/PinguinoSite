@@ -1,6 +1,7 @@
 # Pinguino Site
 
-This branch holds the site for Pinguino, hosted on Deno Deploy. It is built using Deno and Fresh.
+This branch holds the site for Pinguino, hosted on Deno Deploy. It is built
+using Deno and Fresh.
 
 ### Usage
 
