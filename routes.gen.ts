@@ -4,15 +4,21 @@
 
 import * as $0 from "./pages/_404.tsx";
 import * as $1 from "./pages/index.tsx";
-import * as $2 from "./pages/documentation/[name].tsx";
-import * as $3 from "./pages/documentation.tsx";
+import * as $2 from "./pages/_app.tsx";
+import * as $3 from "./pages/login.tsx";
+import * as $4 from "./pages/documentation/[name].tsx";
+import * as $5 from "./pages/documentation.tsx";
+import * as $6 from "./pages/api/login_callback.ts";
 
 const routes = {
   pages: {
     "./pages/_404.tsx": $0,
     "./pages/index.tsx": $1,
-    "./pages/documentation/[name].tsx": $2,
-    "./pages/documentation.tsx": $3,
+    "./pages/_app.tsx": $2,
+    "./pages/login.tsx": $3,
+    "./pages/documentation/[name].tsx": $4,
+    "./pages/documentation.tsx": $5,
+    "./pages/api/login_callback.ts": $6,
   },
   baseUrl: import.meta.url,
 };

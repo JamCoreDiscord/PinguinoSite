@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, PageConfig, render } from "../deps.ts";
+import { h, PageConfig } from "../deps.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
 import Footer from "../components/footer.tsx";
