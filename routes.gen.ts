@@ -2,23 +2,25 @@
 // This file SHOULD be checked into source version control.
 // To update this file, run `fresh routes`.
 
-import * as $0 from "./pages/_404.tsx";
-import * as $1 from "./pages/index.tsx";
-import * as $2 from "./pages/_app.tsx";
-import * as $3 from "./pages/login.tsx";
-import * as $4 from "./pages/documentation/[name].tsx";
-import * as $5 from "./pages/documentation.tsx";
-import * as $6 from "./pages/api/login_callback.ts";
+import * as $0 from "./pages/api/login_callback.ts";
+import * as $1 from "./pages/dashboard.tsx";
+import * as $2 from "./pages/documentation/[name].tsx";
+import * as $3 from "./pages/documentation.tsx";
+import * as $4 from "./pages/index.tsx";
+import * as $5 from "./pages/login.tsx";
+import * as $6 from "./pages/reproduction.tsx";
+import * as $7 from "./pages/_404.tsx";
 
 const routes = {
   pages: {
-    "./pages/_404.tsx": $0,
-    "./pages/index.tsx": $1,
-    "./pages/_app.tsx": $2,
-    "./pages/login.tsx": $3,
-    "./pages/documentation/[name].tsx": $4,
-    "./pages/documentation.tsx": $5,
-    "./pages/api/login_callback.ts": $6,
+    "./pages/api/login_callback.ts": $0,
+    "./pages/dashboard.tsx": $1,
+    "./pages/documentation/[name].tsx": $2,
+    "./pages/documentation.tsx": $3,
+    "./pages/index.tsx": $4,
+    "./pages/login.tsx": $5,
+    "./pages/reproduction.tsx": $6,
+    "./pages/_404.tsx": $7,
   },
   baseUrl: import.meta.url,
 };

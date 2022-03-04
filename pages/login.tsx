@@ -31,5 +31,3 @@ export default function Login() {
     </div>
   );
 }
-
-export const config: PageConfig = { runtimeJS: true };

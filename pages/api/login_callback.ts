@@ -3,7 +3,6 @@ import { BASE_URL } from "../../main.ts";
 
 export const handler = async (ctx: HandlerContext): Promise<Response> => {
   const params = new URLSearchParams(ctx.req.url.split("?")[1]);
-  console.log(params.get("code"));
 
   const res = await fetch("https://discord.com/api/oauth2/token", {
     method: "POST",
@@ -19,7 +18,13 @@ export const handler = async (ctx: HandlerContext): Promise<Response> => {
     }),
   });
 
-  console.log(await res.json());
+  const json = await res.json();
 
-  return new Response("");
+  return new Response(null, {
+    status: 307,
+    headers: {
+      "Location": `${BASE_URL}/dashboard`,
+      "Set-Cookie": `token=${json}; Secure; SameSite=Strict`,
+    },
+  });
 };
