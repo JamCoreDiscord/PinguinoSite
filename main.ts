@@ -13,7 +13,9 @@ export const BASE_URL = Deno.env.get("DENO_DEPLOYMENT_ID") == undefined
   ? "http://localhost:8000"
   : "https://pinguino.deno.dev";
 
-await populate();
-await packCss();
+if (Deno.env.get("DENO_DEPLOYMENT_ID") == undefined) {
+  await populate();
+  await packCss();
+}
 
 await start(manifest);

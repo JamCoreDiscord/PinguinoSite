@@ -1,0 +1,26 @@
+name: Deploy (CI)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  deploy:
+    permissions:
+      id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: vx.x.x
+      - name: Pack CSS
+        run: deno run -A --no-check ./util/build.ts
+      - name: Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: pinguino # the name of the project on Deno Deploy
+          entrypoint: main.ts # the entrypoint to deploy
