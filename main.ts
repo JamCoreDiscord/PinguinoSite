@@ -5,8 +5,6 @@
 /// <reference lib="deno.unstable" />
 
 import { start } from "./server_deps.ts";
-import { populate } from "./util/env.ts";
-import { packCss } from "./util/packer.ts";
 import manifest from "./fresh.gen.ts";
 
 export const BASE_URL = Deno.env.get("DENO_DEPLOYMENT_ID") == undefined
@@ -14,8 +12,11 @@ export const BASE_URL = Deno.env.get("DENO_DEPLOYMENT_ID") == undefined
   : "https://pinguino.deno.dev";
 
 if (Deno.env.get("DENO_DEPLOYMENT_ID") == undefined) {
-  await populate();
-  await packCss();
+  await import("./util/build.ts");
 }
+
+console.warn(
+  "Remember to implement Discord Oauth2 state before deploying to production! Very Important!",
+);
 
 await start(manifest);

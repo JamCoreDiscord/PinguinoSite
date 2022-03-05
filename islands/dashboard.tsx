@@ -2,23 +2,29 @@
 import { createContext, h, useEffect, useState } from "../client_deps.ts";
 import { AuthUser, fetchUser, User } from "../util/discord.ts";
 import UserCard from "../components/userCard.tsx";
+import Redirect from "./redirect.tsx";
 
 export const AuthUserContext = createContext({} as AuthUser);
 export const UserContext = createContext({} as User);
 
 export default function Dashboard() {
+  const [useEffectRan, setUseEffectRan] = useState(false);
   const [authUser, setAuthUser] = useState({} as AuthUser);
   const [user, setUser] = useState({} as User);
 
   useEffect(() => {
-    const newAuthUser = JSON.parse(document.cookie.split("=")[1]) as AuthUser;
-    setAuthUser(newAuthUser);
-    fetchUser(newAuthUser).then((u) => {
-      setUser(u);
-    });
+    if (document.cookie.includes("token")) {
+      const newAuthUser = JSON.parse(document.cookie.split("=")[1]) as AuthUser;
+      setAuthUser(newAuthUser);
+      fetchUser(newAuthUser).then((u) => {
+        setUser(u);
+      });
+    }
+
+    setUseEffectRan(true);
   }, []);
 
-  if (authUser) {
+  if ("access_token" in authUser || !useEffectRan) { // Load the `Loading...` page until the user is fetched (attempted)
     if (!user.username) {
       return <div class="margin-60px-auto max-width-800px">Loading...</div>;
     }
@@ -31,7 +37,6 @@ export default function Dashboard() {
       </AuthUserContext.Provider>
     );
   } else {
-    document.location.href = "/login";
-    return <h1>Redirecting...</h1>;
+    return <Redirect link="/login" />;
   }
 }

@@ -48,3 +48,13 @@ export async function fetchGuilds(auth: AuthUser): Promise<Guild[]> {
   });
   return await res.json() as Guild[];
 }
+
+export async function fetchPinguinoGuilds(): Promise<Guild[]> {
+  const res = await fetch("https://discordapp.com/api/users/@me/guilds", {
+    headers: {
+      Authorization: `Bot ${Deno.env.get("BOT_TOKEN")}`,
+    },
+  });
+  console.log(res);
+  return await res.json() as Guild[];
+}

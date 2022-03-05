@@ -18,6 +18,10 @@
   margin: auto;
 }
 
+.margin-left-auto {
+  margin-left: auto;
+}
+
 .margin-60px-auto {
   margin: 60px auto;
 }

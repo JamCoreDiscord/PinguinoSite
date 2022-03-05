@@ -26,10 +26,18 @@
   font-size: 125%;
 }
 
+.font-size-175p {
+  font-size: 175%;
+}
+
 .font-size-300p {
   font-size: 300%;
 }
 
 .max-width-800px {
   max-width: 800px;
+}
+
+.width-100p {
+  width: 100%;
 }
