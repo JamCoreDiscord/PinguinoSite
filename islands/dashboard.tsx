@@ -16,9 +16,7 @@ export default function Dashboard() {
     if (document.cookie.includes("token")) {
       const newAuthUser = JSON.parse(document.cookie.split("=")[1]) as AuthUser;
       setAuthUser(newAuthUser);
-      fetchUser(newAuthUser).then((u) => {
-        setUser(u);
-      });
+      fetchUser(newAuthUser.access_token).then(setUser);
     }
 
     setUseEffectRan(true);

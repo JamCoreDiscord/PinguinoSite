@@ -31,19 +31,19 @@ export interface AuthUser {
   scope: string;
 }
 
-export async function fetchUser(auth: AuthUser): Promise<User> {
+export async function fetchUser(token: string): Promise<User> {
   const res = await fetch("https://discordapp.com/api/users/@me", {
     headers: {
-      Authorization: `Bearer ${auth.access_token}`,
+      Authorization: `Bearer ${token}`,
     },
   });
   return await res.json() as User;
 }
 
-export async function fetchGuilds(auth: AuthUser): Promise<Guild[]> {
+export async function fetchGuilds(token: string): Promise<Guild[]> {
   const res = await fetch("https://discordapp.com/api/users/@me/guilds", {
     headers: {
-      Authorization: `Bearer ${auth.access_token}`,
+      Authorization: `Bearer ${token}`,
     },
   });
   return await res.json() as Guild[];
@@ -55,6 +55,5 @@ export async function fetchPinguinoGuilds(): Promise<Guild[]> {
       Authorization: `Bot ${Deno.env.get("BOT_TOKEN")}`,
     },
   });
-  console.log(res);
   return await res.json() as Guild[];
 }

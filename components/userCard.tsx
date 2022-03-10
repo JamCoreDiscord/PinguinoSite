@@ -6,16 +6,14 @@ import { fetchGuilds, Guild } from "../util/discord.ts";
 export default function UserCard() {
   const user = useContext(UserContext);
   const authUser = useContext(AuthUserContext);
-  const [userGuilds, setUserGuilds] = useState([] as Guild[]);
-  const [pinguinoGuilds, setPinguinoGuilds] = useState([] as Guild[]);
-  useEffect(() => {
-    fetchGuilds(authUser).then(setUserGuilds);
-    fetch("/api/guilds").then((res) => res.json().then(setPinguinoGuilds));
-  }, [authUser]);
 
-  if (userGuilds.length === 0 || pinguinoGuilds.length === 0) {
-    return <div class="margin-60px-auto max-width-800px">Loading...</div>;
-  }
+  const [guilds, setGuilds] = useState([] as Guild[]);
+
+  useEffect(() => {
+    fetch("/api/guilds", {
+      headers: { "Authorization": `Bearer ${authUser.access_token}` },
+    }).then((res) => res.json().then(setGuilds));
+  }, [authUser]);
 
   return (
     <div class="display-flex align-items-center justify-content-space-between background-lightblue pad-15px border-radius-25px">
@@ -32,11 +30,9 @@ export default function UserCard() {
           onChange={(e) => {
           }}
         >
-          {userGuilds.filter((g) =>
-            ((g.permissions & 0x8) === 0x8) && pinguinoGuilds.filter((pg) =>
-                pg.id == g.id
-              ).length > 0
-          ).map((guild) => <option value={guild.name}>{guild.name}</option>)}
+          {guilds.filter((g) => ((g.permissions & 0x8) === 0x8)).map((
+            guild,
+          ) => <option value={guild.name}>{guild.name}</option>)}
         </select>
       </div>
     </div>

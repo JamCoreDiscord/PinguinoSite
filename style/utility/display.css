@@ -2,6 +2,14 @@
   display: inline-block;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-inherit {
+  flex-wrap: inherit;
+}
+
 .display-flex {
   display: flex;
 }

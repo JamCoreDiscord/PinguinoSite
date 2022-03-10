@@ -1,8 +1,11 @@
 import { HandlerContext } from "../../server_deps.ts";
-import { BASE_URL } from "../../main.ts";
+import { BASE_URL } from "../../constants.ts";
 
-export const handler = async (ctx: HandlerContext): Promise<Response> => {
-  const params = new URLSearchParams(ctx.req.url.split("?")[1]);
+export const handler = async (
+  req: Request,
+  _ctx: HandlerContext,
+): Promise<Response> => {
+  const params = new URLSearchParams(req.url.split("?")[1]);
 
   const res = await fetch("https://discord.com/api/oauth2/token", {
     method: "POST",

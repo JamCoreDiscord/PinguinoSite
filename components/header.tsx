@@ -4,8 +4,8 @@ import AccountManagementLink from "../islands/accountLink.tsx";
 
 export default function Header() {
   return (
-    <div class="overflow-hidden">
-      <div class="display-flex align-items-center">
+    <div class="overflow-hidden flex-wrap white-space-nowrap">
+      <div class="display-flex align-items-center flex-wrap-inherit">
         <img
           class="height-6vh border-radius-25px"
           src="/assets/favicon.ico"
@@ -14,8 +14,8 @@ export default function Header() {
           Pinguino
         </h1>
       </div>
-      <div class="display-flex justify-content-space-between">
-        <div class="font-size-125p margin-0px margin-top-6px padding-0px">
+      <div class="display-flex justify-content-space-between flex-wrap-inherit">
+        <div class="font-size-125p margin-0px margin-top-6px padding-0px display-flex flex-wrap-inherit">
           <a class="margin-right-35px" href="/">Home</a>
           <a
             class="margin-right-35px"
@@ -38,8 +38,7 @@ export default function Header() {
             href="https://github.com/JamCoreDiscord/Pinguino"
             target="_blank"
           >
-            <i class="fa-brands fa-github font-size-175p">
-            </i>
+            <i class="fa-brands fa-github font-size-175p" />
           </a>
           <a
             class="margin-left-10px"
