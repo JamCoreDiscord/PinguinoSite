@@ -1,4 +1,5 @@
 import { HandlerContext } from "../../server_deps.ts";
+import { BASE_URL } from "../../constants.ts";
 
 export const handler = async (
   req: Request,
@@ -26,7 +27,12 @@ export const handler = async (
         await (await fetch(
           `https://raw.githubusercontent.com/JamCoreDiscord/PinguinoSite/site/_docs/${filePath}`,
         )).text(),
-        { status: 200 },
+        {
+          status: 200,
+          headers: {
+            "Access-Control-Allow-Origin": BASE_URL,
+          },
+        },
       );
     } else {
       return new Response(await Deno.readTextFile(`_docs/${filePath}`), {
