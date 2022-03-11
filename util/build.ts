@@ -6,7 +6,7 @@ const baseDir = "./style";
 
 async function packUp(dir: string, base: string): Promise<string> {
   for await (const file of Deno.readDir(`${baseDir}/${dir}`)) {
-    console.log(`Found path: ${baseDir}/${file.name}`);
+    console.log(`Found path: ${baseDir}/${dir}/${file.name}`);
     if (file.isDirectory) {
       base += await packUp(file.name, base);
     } else if (file.name.endsWith(".css")) {

@@ -31,7 +31,7 @@ export default function Header() {
             Report Issues
           </a>
         </div>
-        <div class="pad-bottom-15px display-flex">
+        <div class="display-flex m-justify-content-center m-pad-left-35vw m-pad-top-10px">
           {/* <AccountManagementLink /> */}
           <a
             class="margin-left-10px"

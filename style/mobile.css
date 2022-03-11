@@ -1,0 +1,9 @@
+@media (max-width: 500px) {
+  .m-pad-top-10px {
+    padding-top: 10px;
+  }
+
+  .m-pad-left-35vw {
+    padding-left: 35vw;
+  }
+}
