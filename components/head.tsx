@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, Head as JSXHead } from "../deps.ts";
+import { h, Head as JSXHead } from "../client_deps.ts";
 
 export default function Head() {
   return (
@@ -7,7 +7,7 @@ export default function Head() {
       <title>Pinguino</title>
       <script src="https://kit.fontawesome.com/df2dc764b4.js">
       </script>
-      <link rel="stylesheet" href="/style.css" />
+      <link rel="stylesheet" href="/packed.css" />
       <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
       <meta property="og:site_name" content="Pinguino" />
       <meta property="og:title" content="Pinguino" />

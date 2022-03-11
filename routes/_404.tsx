@@ -1,12 +1,12 @@
 /** @jsx h */
-import { h } from "../deps.ts";
+import { h } from "../client_deps.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
 import Footer from "../components/footer.tsx";
 
 export default function NotFound() {
   return (
-    <div class="wrapper glitch">
+    <div class="margin-60px-auto max-width-800px glitch">
       <Head />
       <Header />
       <h1>404 - Not Found</h1>
