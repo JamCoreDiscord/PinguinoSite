@@ -17,7 +17,11 @@ export default function InProgress() {
   }, [forceUpdate]);
 
   return (
-    <div class="align-items-center justify-content-center display-flex">
+    <div class="display-flex flex-direction-column align-items-center justify-content-center">
+      <h1>
+        Sorry, we're still working on this page; please visit us again later to
+        view it.
+      </h1>
       <progress max="100" value={value} />
     </div>
   );

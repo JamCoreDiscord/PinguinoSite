@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
+
 .flex-wrap-inherit {
   flex-wrap: inherit;
 }
