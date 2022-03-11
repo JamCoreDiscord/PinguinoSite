@@ -32,7 +32,7 @@ export default function Header() {
           </a>
         </div>
         <div class="pad-bottom-15px display-flex">
-          <AccountManagementLink />
+          {/* <AccountManagementLink /> */}
           <a
             class="margin-left-10px"
             href="https://github.com/JamCoreDiscord/Pinguino"
