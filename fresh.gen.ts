@@ -3,16 +3,17 @@
 // To update this file, run `fresh manifest`.
 
 import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/api/documentations.ts";
-import * as $2 from "./routes/api/guilds.ts";
-import * as $3 from "./routes/api/login_callback.ts";
-import * as $4 from "./routes/api/renderMarkdown.ts";
-import * as $5 from "./routes/api/signout.ts";
-import * as $6 from "./routes/dashboard.tsx";
-import * as $7 from "./routes/documentation.tsx";
-import * as $8 from "./routes/documentation/[name].tsx";
-import * as $9 from "./routes/index.tsx";
-import * as $10 from "./routes/login.tsx";
+import * as $1 from "./routes/_middleware.ts";
+import * as $2 from "./routes/api/documentations.ts";
+import * as $3 from "./routes/api/guilds.ts";
+import * as $4 from "./routes/api/login_callback.ts";
+import * as $5 from "./routes/api/renderMarkdown.ts";
+import * as $6 from "./routes/api/signout.ts";
+import * as $7 from "./routes/dashboard.tsx";
+import * as $8 from "./routes/documentation.tsx";
+import * as $9 from "./routes/documentation/[name].tsx";
+import * as $10 from "./routes/index.tsx";
+import * as $11 from "./routes/login.tsx";
 import * as $$0 from "./islands/accountLink.tsx";
 import * as $$1 from "./islands/dashboard.tsx";
 import * as $$2 from "./islands/documentation.tsx";
@@ -23,16 +24,17 @@ import * as $$5 from "./islands/redirect.tsx";
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
-    "./routes/api/documentations.ts": $1,
-    "./routes/api/guilds.ts": $2,
-    "./routes/api/login_callback.ts": $3,
-    "./routes/api/renderMarkdown.ts": $4,
-    "./routes/api/signout.ts": $5,
-    "./routes/dashboard.tsx": $6,
-    "./routes/documentation.tsx": $7,
-    "./routes/documentation/[name].tsx": $8,
-    "./routes/index.tsx": $9,
-    "./routes/login.tsx": $10,
+    "./routes/_middleware.ts": $1,
+    "./routes/api/documentations.ts": $2,
+    "./routes/api/guilds.ts": $3,
+    "./routes/api/login_callback.ts": $4,
+    "./routes/api/renderMarkdown.ts": $5,
+    "./routes/api/signout.ts": $6,
+    "./routes/dashboard.tsx": $7,
+    "./routes/documentation.tsx": $8,
+    "./routes/documentation/[name].tsx": $9,
+    "./routes/index.tsx": $10,
+    "./routes/login.tsx": $11,
   },
   islands: {
     "./islands/accountLink.tsx": $$0,
