@@ -8,17 +8,31 @@ export const handler = async (
   const json = JSON.parse(await Deno.readTextFile("_docs/urls.json"));
 
   if (params.has("file")) {
-    const file = params.get("file");
+    const name = params.get("file");
 
+    let filePath;
     for (const obj of json) {
-      if (obj.url === file) {
-        return new Response(await Deno.readTextFile(`_docs/${obj.file}`), {
-          status: 200,
-        });
+      if (obj.url === name) {
+        filePath = obj.file;
       }
     }
 
-    return new Response(null, { status: 404 });
+    if (!filePath) {
+      return new Response(null, { status: 404 });
+    }
+
+    if (Deno.env.get("DENO_DEPLOYMENT_ID")) {
+      return new Response(
+        await (await fetch(
+          `https://raw.githubusercontent.com/JamCoreDiscord/PinguinoSite/site/_docs/${filePath}`,
+        )).text(),
+        { status: 200 },
+      );
+    } else {
+      return new Response(await Deno.readTextFile(`_docs/${filePath}`), {
+        status: 200,
+      });
+    }
   } else {
     const temp = [];
     for (const obj of json) {
