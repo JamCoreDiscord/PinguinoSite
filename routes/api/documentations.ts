@@ -27,12 +27,7 @@ export const handler = async (
         await (await fetch(
           `https://raw.githubusercontent.com/JamCoreDiscord/PinguinoSite/site/_docs/${filePath}`,
         )).text(),
-        {
-          status: 200,
-          headers: {
-            "Access-Control-Allow-Origin": BASE_URL,
-          },
-        },
+        { status: 200 },
       );
     } else {
       return new Response(await Deno.readTextFile(`_docs/${filePath}`), {
