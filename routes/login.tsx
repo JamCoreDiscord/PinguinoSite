@@ -3,7 +3,8 @@ import { h } from "../client_deps.ts";
 import { BASE_URL } from "../constants.ts";
 import Head from "../components/head.tsx";
 import Header from "../components/header.tsx";
-import Redirect from "../islands/redirect.tsx";
+// import Redirect from "../islands/redirect.tsx";
+import InProgress from "../islands/inProgress.tsx";
 import Footer from "../components/footer.tsx";
 
 export default function Login() {
@@ -23,7 +24,8 @@ export default function Login() {
     <div class="margin-60px-auto max-width-800px">
       <Head />
       <Header />
-      <Redirect link={authorizeUrl} />
+      <InProgress />
+      {/* <Redirect link={authorizeUrl} /> */}
       <Footer />
     </div>
   );

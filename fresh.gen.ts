@@ -17,7 +17,8 @@ import * as $$0 from "./islands/accountLink.tsx";
 import * as $$1 from "./islands/dashboard.tsx";
 import * as $$2 from "./islands/documentation.tsx";
 import * as $$3 from "./islands/documentationList.tsx";
-import * as $$4 from "./islands/redirect.tsx";
+import * as $$4 from "./islands/inProgress.tsx";
+import * as $$5 from "./islands/redirect.tsx";
 
 const manifest = {
   routes: {
@@ -38,7 +39,8 @@ const manifest = {
     "./islands/dashboard.tsx": $$1,
     "./islands/documentation.tsx": $$2,
     "./islands/documentationList.tsx": $$3,
-    "./islands/redirect.tsx": $$4,
+    "./islands/inProgress.tsx": $$4,
+    "./islands/redirect.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };
