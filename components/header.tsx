@@ -10,9 +10,11 @@ export default function Header() {
           class="height-6vh border-radius-25px"
           src="/assets/favicon.ico"
         />
-        <h1 class="font-size-300p font-weight-700 color-meadow pad-left-15px">
-          Pinguino
-        </h1>
+        <a href="/">
+          <h1 class="font-size-300p font-weight-700 color-meadow pad-left-15px">
+            Pinguino
+          </h1>
+        </a>
       </div>
       <div class="display-flex justify-content-space-between flex-wrap-inherit">
         <div class="font-size-125p margin-0px margin-top-6px padding-0px display-flex flex-wrap-inherit">
