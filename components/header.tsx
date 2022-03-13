@@ -27,6 +27,12 @@ export default function Header() {
           </a>
           <a
             class="margin-right-35px"
+            href="/about"
+          >
+            About
+          </a>
+          <a
+            class="margin-right-35px"
             href="https://github.com/JamCoreDiscord/Pinguino/issues/new"
             target="_blank"
           >

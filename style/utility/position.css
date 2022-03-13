@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+.align-self-center {
+  align-self: center;
+}
+
 .float-left {
   float: left;
 }

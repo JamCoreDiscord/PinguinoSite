@@ -39,8 +39,7 @@ export default function Home() {
       <p>
         All of Pinguino's source code is available on GitHub, free for anyone
         who abides by the license agreement. You can find out more about the
-        development of the bot on the
-        <a href="/technology">technology page</a>.
+        development of the bot on the <a href="/tech">technology page</a>.
       </p>
 
       <div class="background-lightblue text-align-center width-200px margin-auto border-radius-18px font-size-medium">

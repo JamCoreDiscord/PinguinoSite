@@ -10,6 +10,14 @@
   width: 200px;
 }
 
+.width-12vw {
+  width: 12vw;
+}
+
+.width-25vw {
+  width: 25vw;
+}
+
 .font-size-medium {
   font-size: medium;
 }
