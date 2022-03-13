@@ -47,9 +47,12 @@ export default function DocumentationHome({ data }: PageProps<Url[]>) {
           {data.map((url: Url) => (
             (
               <li key={url.url}>
-                <a href={`/documentation/${url.url}`}>
-                  {`${url.pretty} - ${url.description.toLowerCase()}`}
-                </a>
+                <p>
+                  <a href={`/documentation/${url.url}`}>
+                    {url.pretty}
+                  </a>
+                  {` - ${url.description.toLowerCase()}`}
+                </p>
               </li>
             )
           ))}
