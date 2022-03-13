@@ -48,7 +48,7 @@ export default function DocumentationHome({ data }: PageProps<Url[]>) {
             (
               <li key={url.url}>
                 <a href={`/documentation/${url.url}`}>
-                  {url.pretty}
+                  {`${url.pretty} - ${url.description.toLowerCase()}`}
                 </a>
               </li>
             )

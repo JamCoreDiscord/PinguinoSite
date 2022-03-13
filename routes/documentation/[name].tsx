@@ -10,6 +10,7 @@ import NotFound from "../_404.tsx";
 interface HandlerResponse {
   md: string;
   prettyName: string;
+  description: string;
 }
 
 export const handler = async (
@@ -19,10 +20,12 @@ export const handler = async (
   const urls: Url[] = JSON.parse(await Deno.readTextFile("_docs/urls.json"));
   let content = "404";
   let prettyName = "Unknown";
+  let description = "Unknown";
 
   for (const obj of urls) {
     if (obj.url == ctx.params.name) {
       prettyName = obj.pretty;
+      description = obj.description;
       if (Deno.env.get("DENO_DEPLOYMENT_ID")) {
         content = await (await fetch(
           `https://raw.githubusercontent.com/JamCoreDiscord/PinguinoSite/site/_docs/${obj.file}`,
@@ -35,7 +38,11 @@ export const handler = async (
     }
   }
 
-  return ctx.render({ md: content, prettyName: prettyName });
+  return ctx.render({
+    md: content,
+    prettyName: prettyName,
+    description: description,
+  });
 };
 
 export default function Documentation({ data }: PageProps<HandlerResponse>) {
@@ -47,7 +54,7 @@ export default function Documentation({ data }: PageProps<HandlerResponse>) {
     <div class="margin-60px-auto max-width-800px">
       <Head
         title={`Documentation - ${data.prettyName}`}
-        description={`${data.prettyName} documentation for the Pinguino Discord bot`}
+        description={data.description}
       />
       <Header />
       {

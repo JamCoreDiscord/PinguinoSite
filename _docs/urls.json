@@ -1,6 +1,7 @@
 [
   {
     "pretty": "Getting Started",
+    "description": "Get started with Pinguino - an open-source, multi-purpose Discord bot suited to all servers",
     "url": "getting-started",
     "file": "0-GETTING-STARTED.md"
   }
