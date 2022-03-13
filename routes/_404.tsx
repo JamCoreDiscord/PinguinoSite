@@ -11,7 +11,7 @@ export default function NotFound() {
       <Header />
       <h1>404 - Not Found</h1>
       <p>
-        You're lost and it's getting dark...better go <a href="/">home</a>.
+        We can't find that page...better go <a href="/">home</a>.
       </p>
       <Footer />
     </div>
