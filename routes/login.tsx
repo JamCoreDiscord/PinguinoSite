@@ -22,7 +22,7 @@ export default function Login() {
 
   return (
     <div class="margin-60px-auto max-width-800px">
-      <Head />
+      <Head title="Login" description="Login to the Pinguino web dashboard" />
       <Header />
       <InProgress />
       {/* <Redirect link={authorizeUrl} /> */}

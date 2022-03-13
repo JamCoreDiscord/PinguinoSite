@@ -7,7 +7,10 @@ import Footer from "../components/footer.tsx";
 export default function Home() {
   return (
     <div class="margin-60px-auto max-width-800px">
-      <Head />
+      <Head
+        title="Pinguino"
+        description="Pinguino - an open-source, multi-purpose Discord bot suited to all servers"
+      />
       <Header />
       <h2>Modern. Full Featured. Open Source.</h2>
       <p>

@@ -10,7 +10,10 @@ import InProgress from "../islands/inProgress.tsx";
 export default function Dashboard() {
   return (
     <div class="margin-60px-auto max-width-800px">
-      <Head />
+      <Head
+        title="Web Dashboard"
+        description="The online dashboard used to configure Pinguino"
+      />
       <Header />
       <InProgress />
       {/* <DashboardIsland /> */}

@@ -7,7 +7,7 @@ import Footer from "../components/footer.tsx";
 export default function NotFound() {
   return (
     <div class="margin-60px-auto max-width-800px glitch">
-      <Head />
+      <Head title="Not Found" description="Error 404: Not Found" />
       <Header />
       <h1>404 - Not Found</h1>
       <p>

@@ -31,7 +31,10 @@ export const handler = async (
 export default function DocumentationHome({ data }: PageProps<Url[]>) {
   return (
     <div class="margin-60px-auto max-width-800px">
-      <Head />
+      <Head
+        title="Documentation"
+        description="The home of Pinguino's documentation"
+      />
       <Header />
       <h2>Documentation</h2>
       <p>
