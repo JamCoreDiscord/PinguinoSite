@@ -5,10 +5,7 @@ on:
   pull_request:
 
 jobs:
-  deploy:
-    permissions:
-      id-token: write
-      contents: read
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
