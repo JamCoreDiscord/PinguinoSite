@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     permissions:
-      id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
+      id-token: write
       contents: read
     runs-on: ubuntu-latest
     steps:
@@ -22,5 +22,5 @@ jobs:
       - name: Deploy
         uses: denoland/deployctl@v1
         with:
-          project: pinguino # the name of the project on Deno Deploy
-          entrypoint: main.ts # the entrypoint to deploy
+          project: pinguino
+          entrypoint: main.ts
