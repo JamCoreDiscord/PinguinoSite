@@ -10,5 +10,11 @@
     "description": "Learn about all of Pinguino's modules",
     "url": "modules",
     "file": "1-MODULES.md"
+  },
+  {
+    "pretty": "Dashboard",
+    "description": "Learn about Pinguino's dashboard, and how to use it to configure the bot to your needs",
+    "url": "dashboard",
+    "file": "2-DASHBOARD.md"
   }
 ]
