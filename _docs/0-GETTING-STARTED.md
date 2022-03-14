@@ -26,6 +26,21 @@ The bot needs to be configured with a `config.yml` file that is in the same
 directory as the JAR:
 
 ```yml
+environment: 'development'
+
+auth:
+  development_bot_token: 'YOUR_TOKEN_FOR_DEVELOPMENT_BOT'
+  dbl_token: 'YOUR_TOP_GG_TOKEN'
+  sentry_url: 'YOUR_SENTRY_INGEST_URL'
+  mongo_url: 'mongodb://localhost:27017'
+development:
+  admin_id: YOUR_DISCORD_ID
+  server_id: YOUR_TESTING_SERVER_ID
+production:
+  admin_id: YOUR_DISCORD_ID
 ```
+
+A full list of configuration options can be found in
+[the GitHub repository](https://github.com/JamCoreDiscord/Pinguino/blob/release/src/main/kotlin/io/github/jamalam/pinguino/config/ConfigSchema.kt)
 
 To run the bot, use `java -jar Pinguino-[VERSION].jar`
