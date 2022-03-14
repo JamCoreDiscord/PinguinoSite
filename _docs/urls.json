@@ -11,7 +11,7 @@
     "description": "Learn about all of Pinguino's modules",
     "url": "modules",
     "file": "1-MODULES.md",
-    "wip": false
+    "wip": true
   },
   {
     "pretty": "Dashboard",

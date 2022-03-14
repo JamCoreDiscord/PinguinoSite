@@ -6,4 +6,8 @@
   .m-pad-left-35vw {
     padding-left: 35vw;
   }
+
+  .m-justify-content-center {
+    justify-content: center;
+  }
 }
