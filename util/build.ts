@@ -1,5 +1,3 @@
-// This file is run if the site is run locally (i.e. not on Deploy)
-
 import { parse } from "https://deno.land/x/dot_env@0.2.0/mod.ts";
 
 const baseDir = "./style";
