@@ -16,8 +16,14 @@ export default function Home() {
       <h2>Modern. Full Featured. Open Source.</h2>
 
       <p>
+        Are you tired of bloated bots? Do you want a single feature and not the
+        bloat that comes with it?
+      </p>
+
+      <p>
         Pinguino is a general purpose Discord bot with a rich, diverse set of
-        features.
+        features. The catch? All of it's features are disabed by default, and
+        must be enabled via our modern web dashboard.
       </p>
 
       <h3>Modern.</h3>
@@ -31,8 +37,9 @@ export default function Home() {
 
       <p>
         Pinguino contains a vast number of features useful for any server, but
-        the catch is that they are all _disabled_ by default. The bot can be
-        invited with only one use-case in mind without being bloated.
+        they are all _disabled_ by default. The bot can either be used with only
+        one use-case in mind without being bloated, or as a complete package
+        providing all the features your server needs.
       </p>
 
       <h3>Open Source.</h3>
