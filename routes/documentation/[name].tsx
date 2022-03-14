@@ -11,6 +11,7 @@ interface HandlerResponse {
   md: string;
   prettyName: string;
   description: string;
+  wip: boolean;
 }
 
 export const handler = async (
@@ -21,11 +22,13 @@ export const handler = async (
   let content = "404";
   let prettyName = "Unknown";
   let description = "Unknown";
+  let wip = false;
 
   for (const obj of urls) {
     if (obj.url == ctx.params.name) {
       prettyName = obj.pretty;
       description = obj.description;
+      wip = obj.wip;
       if (Deno.env.get("DENO_DEPLOYMENT_ID")) {
         content = await (await fetch(
           `https://raw.githubusercontent.com/JamCoreDiscord/PinguinoSite/site/_docs/${obj.file}`,
@@ -42,6 +45,7 @@ export const handler = async (
     md: content,
     prettyName: prettyName,
     description: description,
+    wip: wip,
   });
 };
 
@@ -63,6 +67,15 @@ export default function Documentation({ data }: PageProps<HandlerResponse>) {
           dangerouslySetInnerHTML={{ __html: markdown(data.md) }}
         />
       }
+      {data.wip
+        ? (
+          <p>
+            <strong>
+              This page is still a work in progress, please check back later
+            </strong>
+          </p>
+        )
+        : null}
       <Footer />
     </div>
   );

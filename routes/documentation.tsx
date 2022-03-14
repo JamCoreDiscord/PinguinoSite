@@ -49,7 +49,7 @@ export default function DocumentationHome({ data }: PageProps<Url[]>) {
               <li key={url.url}>
                 <p>
                   <a href={`/documentation/${url.url}`}>
-                    {url.pretty}
+                    {(url.wip ? "(WIP) " : "") + url.pretty}
                   </a>
                   {` - ${url.description.toLowerCase()}`}
                 </p>

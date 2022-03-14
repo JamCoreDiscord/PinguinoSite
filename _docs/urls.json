@@ -3,18 +3,21 @@
     "pretty": "Getting Started",
     "description": "Get started with Pinguino - an open-source, multi-purpose Discord bot suited to all servers",
     "url": "getting-started",
-    "file": "0-GETTING-STARTED.md"
+    "file": "0-GETTING-STARTED.md",
+    "wip": true
   },
   {
     "pretty": "Modules",
     "description": "Learn about all of Pinguino's modules",
     "url": "modules",
-    "file": "1-MODULES.md"
+    "file": "1-MODULES.md",
+    "wip": false
   },
   {
     "pretty": "Dashboard",
     "description": "Learn about Pinguino's dashboard, and how to use it to configure the bot to your needs",
     "url": "dashboard",
-    "file": "2-DASHBOARD.md"
+    "file": "2-DASHBOARD.md",
+    "wip": true
   }
 ]

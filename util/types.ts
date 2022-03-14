@@ -3,4 +3,5 @@ export interface Url {
   description: string;
   url: string;
   file: string;
+  wip: boolean;
 }
